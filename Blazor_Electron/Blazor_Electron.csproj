@@ -8,6 +8,7 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.2" />
     <PackageReference Include="MudBlazor" Version="1.2.4" />
     <PackageReference Include="sqlite" Version="3.13.0" />
+    <PackageReference Include="System.Data.SQLite" Version="1.0.113.7" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SharedModel\SharedModel.csproj" />

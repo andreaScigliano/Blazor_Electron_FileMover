@@ -7,12 +7,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ElectronNET.API;
+using Blazor_Electron.Services;
+
 namespace Blazor_Electron
 {
     public class Program
     {
         public static void Main(string[] args)
         {
+            InitAppServices.CreateDatabase();
             CreateHostBuilder(args).Build().Run();
         }
 
