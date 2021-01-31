@@ -1,4 +1,5 @@
 using Blazor_Electron.Data;
+using ElectronNET.API;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Hosting;
@@ -51,6 +52,12 @@ namespace Blazor_Electron
                 endpoints.MapBlazorHub();
                 endpoints.MapFallbackToPage("/_Host");
             });
+            ElectonBootstrap();
+        }
+
+        void ElectonBootstrap() 
+        {
+            Task.Run(async () => await Electron.WindowManager.CreateWindowAsync());
         }
     }
 }
